@@ -10,6 +10,13 @@ services:
       - --config.file=/etc/prometheus/prometheus.yml
       ports:
       - 9090:9090
+  nginx-prometheus-exporter:
+    image : nginx/nginx-prometheus-exporter:0.2.0
+    container_name: exporter
+    environment:
+      - SCRAPE_URI=http://13.250.48.56:8000/metrics
+    ports:
+      - 9113:9113
   grafana:
       image: grafana/grafana
       container_name: grafana
