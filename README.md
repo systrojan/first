@@ -20,4 +20,4 @@ modify s3cmd commands on /usr/bin/s3cmd
 running test
 - bucket_manager create s3://finaccellbuckcreatesample      ->  https://prnt.sc/p48i86
 - bucket_manager delete s3://finaccellbuckcreatesample1     ->  https://prnt.sc/p48lpa
-- bucket_manager setacl --grant-acl=read:<canonical-user-id> s3://BUCKETNAME[/OBJECT]
+- bucket_manager grant --grant-acl=read:<canonical-user-id> s3://BUCKETNAME[/OBJECT]
